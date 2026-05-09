@@ -49,12 +49,13 @@ rag_chain= create_retrieval_chain(retriever, question_answer_chain)
 def index():
     return render_template('frontpage.html')
 
-@app.route('/get', methods=['GET', 'POST'])
+@app.route('/get', methods=['POST'])
 def chat():
-    msg=request.json["message"]
-    print(input)
+    data = request.get_json()
+    msg=data["message"]
+    print(msg)
     response=rag_chain.invoke({"input": msg})
-    print("Response: ", response["answer"])
+    
     return jsonify({
         "response": response["answer"]
                 })
