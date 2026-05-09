@@ -14,5 +14,3 @@ pinecone==7.3.0
 huggingface-hub
 transformers
 torch
-
--e .
