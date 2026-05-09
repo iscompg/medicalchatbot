@@ -42,7 +42,7 @@ async function sendMessage() {
 
         // API CALL
 
-        const response = await fetch("http://127.0.0.1:8080/get", {
+        const response = await fetch("/get", {
 
             method: "POST",
 
