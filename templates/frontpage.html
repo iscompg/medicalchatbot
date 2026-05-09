@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediBot</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>🩺MediBot</h2>
+    </div>
+
+    <!-- Main Chat -->
+    <div class="chat-section">
+
+      <div class="chat-header">
+        <h1>AI Medical Assistant</h1>
+      </div>
+
+      <!-- Chat Messages -->
+      <div class="chat-box" id="chatBox">
+
+        <div class="message bot">
+          Hello! Describe your symptoms.
+        </div>
+
+      </div>
+
+      <!-- Input Area -->
+      <div class="input-area">
+
+        <input 
+          type="text" 
+          id="userInput"
+          placeholder="Enter symptoms..."
+        >
+
+        <button onclick="sendMessage()">Send</button>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src={{ url_for('static', filename='script.js') }}></script>
+</body>
+</html>
